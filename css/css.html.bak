@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+ <!-- style标签一般先加载，定义head标签中-->
+ <!-- <link rel="stylesheet" href="style/1.css"  type="text/css"/> <!--第一种引入css方式 -->
+ 
+  <style type="text/css">  <!-- 第二种引入css方式 -->
+  /*@import url(style/1.css);*/
+   div.haha{    /*标签选择器 */
+   color:red;
+   }
+
+   div.xixi{
+   color:pink;
+   }
+   .haha{
+    color:red;
+   }
+   .xixi{
+    color:red;
+   }
+   #qq{
+    color:#66CC66;
+   }
+   div{
+   color:yellow;
+   }
+  </style>
+ </HEAD>
+
+ <BODY>
+  <!--html的标签都具备具体的含义。font字体，d1列表....
+  需求是：只为封装数据，不想使用具备特定含义标签，
+  html中提供了两个标签仅用于封装数据，不具备特定含义以及结构。
+  css负责样式。
+
+  div  span
+
+  div标签结束后有换行（有数据时），span无换行。
+
+  标签封装的两种方式：
+  1.块儿级标签（块级元素），结尾处有换行，div. table tr td
+  eg:dl
+  2，行内标签（行内元素），行内标签结尾后无换行。span a  img  input 
+
+  标记型语言都可以加css。
+  css 与html相结合的方式。
+  结合方式一：
+        使用了html标签中的一个属性styles。
+  结合方式二：使用style标签提高了代码复用性。
+
+  选择器：
+  1.html标签名选择器，指定要加载的样式的标签。
+  2.类class选择器，使用的是标签中的class属性。专门给css提供操作的属性。
+  用点来标识；
+  3.id选择器。使用的是标签中的id属性。用的是#标识的。
+  id一般情况下在html标签中需要保证唯一性。不仅可以给css使用，还可以给javascript使用。
+  用的是#标识。对html中封装特定区域的标签为了样式加载或者获取该标签方便，使用id。
+
+  三种基本选择器的优先级：标签选择器<class选择器<id选择器。
+  style属性优先级最高，因为是作用在标签上的。
+  -->
+  <!-- 样式的覆盖 -->
+  <div style="color:yellow;font-size:36px;background-color:black">演示区域</div>
+  <div class="haha" id="qq">演示区域1</div>
+  <div class="xixi">演示区域1</div>
+  <span  class="haha">演示区域1</span>
+  <span  class="haha">演示区域1</span>
+
+  <p>段落演示 区域</p>
+
+  <d1>
+      <dt>上层项目</dt>
+	  <dd>下层项目</dd>
+  </d1>
+
+  <a href="ss"> 超链接</a>
+ </BODY>
+</HTML>

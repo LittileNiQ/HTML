@@ -1,0 +1,143 @@
+<HTML>
+ <HEAD>
+ <!-- style标签一般先加载，定义head标签中-->
+ <!-- <link rel="stylesheet" href="style/1.css"  type="text/css"/> <!--第一种引入css方式 -->
+ 
+  <style type="text/css">  /*第二种引入css方式 */
+  /*@import url(style/1.css);
+   div.haha{    /*标签选择器 
+   color:red;
+   }
+   div.xixi{
+   color:pink;
+   }
+   .haha{
+    color:red;
+   }
+   .xixi{
+    color:red;
+   }
+   #qq{
+    color:#66CC66;
+   }
+   div{
+   color:yellow;
+   }*/
+   
+    /*关联选择器*
+   div span{
+   color:red;
+   }
+   .haha span{/*haha标签上的选择题*
+    color:blue;
+   }
+   .haha span,#qq,.xixi{   /*不同选择器样式相同时，用逗号隔开。*
+    color:red;
+   }
+   */
+  /* 演示伪元素未访问*/
+   a:link{
+   color:blue;
+   background-color:red;
+   /*去掉下划线*/
+  text-decoration: none;
+
+  }
+  
+   /*访问后*/
+  a：visited{
+   color:gray;
+   background-color:white;
+   font-size:16px;
+  }
+  
+   /*悬停*/
+   a:hover{
+   color:red;
+   background-color:blue;
+   font-size:24px;
+  }
+  /*点击*/
+  a:active{
+   color:white;
+   background-color:black;
+   font-size:36px;
+  }
+ div:hover{
+   background-color:pink;
+   font-size:36px;
+ }
+ 
+ input:hover{
+   background-color:blue;
+   font-size:36px;
+ }
+  /*link visited hover active*/
+  </style>
+ </HEAD>
+
+ <BODY>
+  <!--html的标签都具备具体的含义。font字体，d1列表....
+  需求是：只为封装数据，不想使用具备特定含义标签，
+  html中提供了两个标签仅用于封装数据，不具备特定含义以及结构。
+  css负责样式。
+
+  div  span
+
+  div标签结束后有换行（有数据时），span无换行。
+
+  标签封装的两种方式：
+  1.块儿级标签（块级元素），结尾处有换行，div. table tr td
+  eg:dl
+  2，行内标签（行内元素），行内标签结尾后无换行。span a  img  input 
+
+  标记型语言都可以加css。
+  css 与html相结合的方式。
+  结合方式一：
+        使用了html标签中的一个属性styles。
+  结合方式二：使用style标签提高了代码复用性。
+
+  选择器：
+  1.html标签名选择器，指定要加载的样式的标签。
+  2.类class选择器，使用的是标签中的class属性。专门给css提供操作的属性。
+  用点来标识；
+  3.id选择器。使用的是标签中的id属性。用的是#标识的。
+  id一般情况下在html标签中需要保证唯一性。不仅可以给css使用，还可以给javascript使用。
+  用的是#标识。对html中封装特定区域的标签为了样式加载或者获取该标签方便，使用id。
+
+  三种基本选择器的优先级：标签选择器<class选择器<id选择器。
+  style属性优先级最高，因为是作用在标签上的。
+  
+  不同选择器样式相同时，用逗号隔开。
+ --------------------------------------------------------------------------
+ 伪元素选择器，元素的某种状态。默认样式。
+ 四种常见状态：1.未访问：(选择器：link)
+              2.悬停状态（：over）
+              3.点击状态(:active)
+              4.访问后状态(:visited)    
+ --------------------------------------------------------------------------
+  -->
+  <!-- 样式的覆盖 -->
+  
+  <input type="text"/>
+  <hr/>
+  <a href="http:baidu.com" target="_blank">伪元素选择器</a>
+  <hr/>
+  <hr/>
+  
+  <div style="color:yellow;font-size:36px;background-color:black">演示区域</div>
+  <div>这个是<span>演示</span>区域1</div>
+  <div class="xixi">演示区域1</div>
+  <span  class="haha">演示区域1</span>
+  <span  class="haha">演示区域1</span>
+
+  <p>段落演示 区域</p>
+
+  <d1>
+      <dt>上层项目</dt>
+	  <dd>下层项目</dd>
+  </d1>
+
+  <a href="ss"> 超链接</a>
+ </BODY>
+</HTML>
